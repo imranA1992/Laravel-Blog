@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>{{ config('app.name', 'Laravel') }}</title>
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+
+      <h1 class="text-success">List Of Countries</h1>
+      <a href="/countries/create" class="btn btn-primary">Create</a>
+      <table class="table table-striped table-dark">
+        <thead>
+          <tr>
+            <th scope="col">Sr No</th>
+            <th scope="col">Name</th>
+            <th scope="col">Created At</th>
+            <th scope="col">Updated At</th>
+          </tr>
+        </thead>
+        <tbody>
+          @foreach($Countries as $country)
+          <tr>
+            <td scope="row">{{$country->id}}</td>
+            <td>{{$country->name}}</td>
+            <td>{{$country->created_at}}</td>
+            <td>{{$country->updated_at}}</td>
+
+          </tr>
+
+          @endforeach
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
