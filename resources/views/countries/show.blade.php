@@ -21,6 +21,13 @@
   </head>
   <body>
     <div class="container">
+      <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/countries">Home</a></li>
+    <li class="breadcrumb-item"><a href="/countries/create">Create</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Update</li>
+  </ol>
+</nav>
       <h1>Country Details</h1>
       <h4>{{$CountryData->name}}</h4>
       <p>{{$CountryData->created_at}}</p>

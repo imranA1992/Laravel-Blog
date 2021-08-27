@@ -22,12 +22,12 @@
   <body>
     <div class="container">
       <nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="/countries">Home</a></li>
-    <li class="breadcrumb-item"><a href="/countries/create">Create</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Update</li>
-  </ol>
-</nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/countries">Home</a></li>
+          <li class="breadcrumb-item"><a href="/countries/create">Create</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Update</li>
+        </ol>
+      </nav>
       <h1>Edit Country Details</h1>
       <form class="" action="/countries/{{$CountryData->id}}/update" method="post">
         @csrf
