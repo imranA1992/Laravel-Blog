@@ -19,10 +19,9 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   </head>
-  <body>
+  <body class="bg-info text-light">
     <div class="container">
-
-      <h1 class="text-success">List Of Countries</h1>
+      <h1>LIST OF COUNTRIES</h1>
       <a href="/countries/create" class="btn btn-primary">Create</a>
       <table class="table table-striped table-dark">
         <thead>

@@ -19,9 +19,9 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   </head>
-  <body>
+  <body class="bg-info text-light font-family-sans-serif">
     <div class="container">
-      <h1>Create Country</h1>
+      <h1>CREATE COUNTRY</h1>
       <form class="" action="/countries/store" method="post">
         @csrf
         <div class="col-12">
