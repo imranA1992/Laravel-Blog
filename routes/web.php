@@ -23,3 +23,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/countries', 'CountriesController@index');
 Route::get('/countries/create', 'CountriesController@create');
 Route::post('/countries/store', 'CountriesController@store');
+Route::get('/countries/{id}/show', 'CountriesController@show');
+Route::get('/countries/{id}/edit', 'CountriesController@edit');
+Route::post('/countries/{id}/update', 'CountriesController@update');
+Route::post('/countries/{id}/delete', 'CountriesController@destroy');

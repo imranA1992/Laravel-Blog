@@ -31,6 +31,7 @@
             <th scope="col">Name</th>
             <th scope="col">Created At</th>
             <th scope="col">Updated At</th>
+            <th scope="col">Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -40,6 +41,16 @@
             <td>{{$country->name}}</td>
             <td>{{$country->created_at}}</td>
             <td>{{$country->updated_at}}</td>
+            <td>
+              <a href="/countries/{{$country->id}}/show" class="btn btn-info">Show</a>
+              <a href="/countries/{{$country->id}}/edit" class="btn btn-warning">Edit</a>
+              <span class="float-left mr-1">
+                <form class="" action="/countries/{{$country->id}}/delete" method="post">
+                  @csrf
+                  <button type="submit" name="button" class="btn btn-danger">Delete</button>
+                </form>
+              </span>
+            </td>
 
           </tr>
 
