@@ -23,23 +23,29 @@
     <div class="container">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="/countries">Home</a></li>
-          <li class="breadcrumb-item"><a href="/countries/create">Create</a></li>
+          <li class="breadcrumb-item"><a href="">Home</a></li>
+          <li class="breadcrumb-item"><a href="">Create</a></li>
           <li class="breadcrumb-item active" aria-current="page">Update</li>
         </ol>
       </nav>
-      <h1>CREATE COUNTRY</h1>
-      <form class="" action="/countries/store" method="post">
+      <h1>CREATE STATE</h1>
+      <form class="" action="/states/{{$StateData->id}}/update" method="post">
         @csrf
         <div class="col-12">
           <div class="col-4">
             <div class="form-group">
-              <label  for="">Country Name</label>
-              <input type="text" class="form-control" name="CountryName" value="">
+              <label  for="">State Name</label>
+              <input type="text" class="form-control" name="StateName" value="{{$StateData->name}}">
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="form-group">
+              <label  for="">State Status</label>
+              <input type="text" class="form-control" name="StateStatus" value="{{$StateData->status}}">
             </div>
           </div>
           <div class="col-8">
-            <button type="submit" name="button" class="btn btn-primary">Create</button>
+            <button type="submit" name="button" class="btn btn-primary">Update</button>
           </div>
         </div>
       </form>

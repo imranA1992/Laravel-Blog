@@ -27,3 +27,13 @@ Route::get('/countries/{id}/show', 'CountriesController@show');
 Route::get('/countries/{id}/edit', 'CountriesController@edit');
 Route::post('/countries/{id}/update', 'CountriesController@update');
 Route::post('/countries/{id}/delete', 'CountriesController@destroy');
+
+// States Routes
+
+Route::get('/states', 'StatesController@index');
+Route::get('/states/create', 'StatesController@create');
+Route::post('/states/store', 'StatesController@store');
+Route::get('/states/{id}/show', 'StatesController@show');
+Route::get('/states/{id}/edit', 'StatesController@edit');
+Route::post('/states/{id}/update', 'StatesController@update');
+Route::post('/states/{id}/destroy', 'StatesController@destroy');
