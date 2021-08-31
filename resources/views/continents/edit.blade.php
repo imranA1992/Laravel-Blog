@@ -19,7 +19,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   </head>
-  <body class="bg-info text-light font-family-sans-serif">
+  <body>
     <div class="container">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
@@ -28,20 +28,18 @@
           <li class="breadcrumb-item active" aria-current="page">Update</li>
         </ol>
       </nav>
-      <h1>EDIT STATE</h1>
-      <form class="" action="/states/{{$StateData->id}}/update" method="post">
+      <h1>Edit Continent Details</h1>
+      <form class="" action="{{ route('continents.update', $continent) }}" method="post">
         @csrf
+        @method('patch')
         <div class="col-12">
           <div class="col-4">
             <div class="form-group">
-              <label  for="">State Name</label>
-              <input type="text" class="form-control" name="StateName" value="{{$StateData->name}}">
-            </div>
-          </div>
-          <div class="col-4">
-            <div class="form-group">
-              <label  for="">State Status</label>
-              <input type="text" class="form-control" name="StateStatus" value="{{$StateData->status}}">
+              <label  for="">Continent Name</label>
+              <input type="text" class="form-control" name="name" value="{{$continent->name}}">
+              @error('name')
+                <div class="alert alert-danger" alert="role">{{$message}}</div>
+              @enderror
             </div>
           </div>
           <div class="col-8">

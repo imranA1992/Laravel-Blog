@@ -28,20 +28,20 @@
           <li class="breadcrumb-item active" aria-current="page">Update</li>
         </ol>
       </nav>
-      <h1>EDIT STATE</h1>
-      <form class="" action="/states/{{$StateData->id}}/update" method="post">
+      <h1>EDIT CITY</h1>
+      <form class="" action="/cities/{{$CityData->id}}/update" method="post">
         @csrf
         <div class="col-12">
           <div class="col-4">
             <div class="form-group">
-              <label  for="">State Name</label>
-              <input type="text" class="form-control" name="StateName" value="{{$StateData->name}}">
+              <label  for="">City Name</label>
+              <input type="text" class="form-control" name="CityName" value="{{$CityData->name}}">
             </div>
           </div>
           <div class="col-4">
             <div class="form-group">
-              <label  for="">State Status</label>
-              <input type="text" class="form-control" name="StateStatus" value="{{$StateData->status}}">
+              <label  for="">City Status</label>
+              <input type="text" class="form-control" name="CityStatus" value="{{$CityData->status}}">
             </div>
           </div>
           <div class="col-8">

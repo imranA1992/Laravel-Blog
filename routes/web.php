@@ -37,3 +37,17 @@ Route::get('/states/{id}/show', 'StatesController@show');
 Route::get('/states/{id}/edit', 'StatesController@edit');
 Route::post('/states/{id}/update', 'StatesController@update');
 Route::post('/states/{id}/destroy', 'StatesController@destroy');
+
+// Cities Routes
+
+Route::get('/cities', 'CitiesController@index');
+Route::get('/cities/create', 'CitiesController@create');
+Route::post('/cities/store', 'CitiesController@store');
+Route::get('/cities/{id}/show', 'CitiesController@show');
+Route::get('/cities/{id}/edit', 'CitiesController@edit');
+Route::post('/cities/{id}/update', 'CitiesController@update');
+Route::post('/cities/{id}/destroy', 'CitiesController@destroy');
+
+// Continents Route
+
+Route::resource('/continents', 'ContinentsController');
